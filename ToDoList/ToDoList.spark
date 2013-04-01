@@ -1,0 +1,10 @@
+﻿<viewdata model="ToDoList.ToDoListViewModel"/>
+
+${this.FormFor<ToDoListViewModel>()}
+<ul>
+  <div each="var toDo in Model.ToDos">
+    ${toDo.Description}
+    <a href="removeToDoWithId/${toDo.Id}">Done</a>
+  </div>
+</ul>
+${this.EndForm()}
